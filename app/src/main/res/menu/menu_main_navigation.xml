@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/image_recipe"
+        android:title="Recipe"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:icon="@drawable/search"
+        android:title="Search"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:icon="@drawable/bookmark"
+        android:title="Keep"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:icon="@drawable/user"
+        android:title="MyPage"
+        app:showAsAction="ifRoom" />
+
+</menu>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.AbhayAssessment" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="BottomTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">1dp</item>
+    </style>
+
+    <style name="TextViewStyleBold" parent="android:Widget.TextView">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/font_roboto_bold</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+
+    <style name="TextViewStyleMedium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:lineSpacingExtra">-1dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:fontFamily">@font/font_roboto_regular</item>
+    </style>
+
+</resources>

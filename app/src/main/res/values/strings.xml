@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AbhayAssessment</string>
+    <string name="string_calorie">Calorie (kcal)</string>
+    <string name="string_time">Time (min)</string>
+    <string name="string_price">Price (₹)</string>
+    <string name="string_ingredients">Ingredients</string>
+</resources>

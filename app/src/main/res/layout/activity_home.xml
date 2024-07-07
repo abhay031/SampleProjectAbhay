@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/id_parent_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_home_toolbar"
+        android:clipToPadding="false"
+        android:outlineProvider="background"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <FrameLayout
+                android:id="@+id/idFrameCollapsingBig"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="@color/colorRed"
+                app:layout_collapseMode="parallax">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="@dimen/dimen_app_bar_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewStyleBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Today's Recipe"
+                        android:textColor="@color/white"
+                        android:textSize="36sp"
+                        android:textStyle="bold"
+                        android:transitionName="unique_word" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:src="@drawable/calendar"
+                        app:tint="@color/white" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/id_app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/background_home_toolbar"
+                android:clipChildren="false"
+                android:clipToOutline="false"
+                android:clipToPadding="false"
+                app:layout_collapseMode="pin">
+
+                <TextView
+                    android:id="@+id/idFrameCollapsingSmall"
+                    style="@style/TextViewStyleBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="24dp"
+                    android:background="@drawable/background_home_toolbar"
+                    android:gravity="center"
+                    android:text="Today's Recipe"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:transitionName="unique_word"
+                    android:visibility="gone" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/idFrame"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_home_toolbar"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dimen_app_bar_height"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/idRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:itemCount="1"
+                tools:listitem="@layout/adapter_recipe" />
+
+            <TextView
+                android:id="@+id/idTitle"
+                style="@style/TextViewStyleBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:ellipsize="end"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:text="Recommend"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/idRecyclerViewHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/adapter_recipe_horizontal" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/id_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_app_bar_height"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        app:elevation="2dp"
+        app:itemIconSize="26dp"
+        app:itemIconTint="@color/color_menu_bottom"
+        app:itemRippleColor="@color/colorRippleEffect"
+        app:itemTextAppearanceActive="@style/BottomTextViewStyle"
+        app:itemTextAppearanceInactive="@style/BottomTextViewInActiveStyle"
+        app:itemTextColor="@color/color_menu_bottom"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_main_navigation" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

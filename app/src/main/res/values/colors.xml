@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DD2C00</color>
+    <color name="colorPrimaryDark">#DD2C00</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black">#FF000000</color>
+    <color name="blackOne">#8A000000</color>
+    <color name="blackTwo">#46000000</color>
+    <color name="blackThree">#00BF6161</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorRed">#DD2C00</color>
+    <color name="colorRippleEffect">#e8e8e8</color>
+    <color name="colorTextPrimary">#333333</color>
+
+</resources>
