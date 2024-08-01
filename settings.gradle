@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AbhayAssessment"
+rootProject.name = "SampleProject"
 include ':app'

@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace 'com.newsbytes.abhay'
+    namespace 'com.android.abhay'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.newsbytes.abhay"
+        applicationId "com.android.abhay"
         minSdk 24
         targetSdk 34
         versionCode 1

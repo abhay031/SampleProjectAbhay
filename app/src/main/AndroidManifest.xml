@@ -18,7 +18,7 @@
         tools:targetApi="31">
 
         <activity
-            android:name="com.newsbytes.abhay.ui.HomeActivity"
+            android:name="com.android.abhay.ui.HomeActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.newsbytes.abhay.ui.DetailsActivity"
+            android:name="com.android.abhay.ui.DetailsActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
 
 
