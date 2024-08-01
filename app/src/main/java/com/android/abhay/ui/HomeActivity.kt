@@ -13,8 +13,10 @@ import com.android.abhay.jetpack.bases.OnEventTriggerListener
 import com.android.abhay.jetpack.entities.RecipeEntity
 import com.android.abhay.utils.HelperActionBar
 import com.android.abhay.utils.IntentKeys
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class HomeActivity : BaseActivity() {
 
     private lateinit var binding: ActivityHomeBinding

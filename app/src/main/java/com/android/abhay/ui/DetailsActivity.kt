@@ -12,7 +12,9 @@ import com.android.abhay.databinding.ActivityDetailsBinding
 import com.android.abhay.jetpack.bases.BaseActivity
 import com.android.abhay.jetpack.entities.RecipeEntity
 import com.android.abhay.utils.IntentKeys
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DetailsActivity : BaseActivity() {
 
     private lateinit var binding: ActivityDetailsBinding

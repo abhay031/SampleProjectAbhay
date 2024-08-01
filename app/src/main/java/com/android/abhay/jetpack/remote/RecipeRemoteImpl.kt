@@ -5,14 +5,18 @@ import com.android.abhay.jetpack.bases.ParseJson
 import com.android.abhay.jetpack.bases.ResponseType
 import com.android.abhay.jetpack.bases.Urls
 import com.android.abhay.jetpack.entities.RecipeEntity
+import com.android.abhay.jetpack.retrofit.RetrofitCalls
 import com.android.abhay.jetpack.retrofit.RetrofitUtil
 import com.android.abhay.utils.Constants.KEY_UNAUTHORISED_CODE
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
 
-class RecipeRemoteImpl : RecipeRemote {
+class RecipeRemoteImpl @Inject constructor(
+    val retrofitCalls: RetrofitCalls,
+) : RecipeRemote {
 
     private var apiCall: Call<Any>? = null
 
@@ -20,7 +24,7 @@ class RecipeRemoteImpl : RecipeRemote {
         listener: OnEventTriggerListener
     ) {
         apiCall?.cancel()
-        apiCall = RetrofitUtil.instance.retrofitApis().commonGet(
+        apiCall = retrofitCalls.commonGet(
             auth = "", Urls.apiFetchData()
         )
         apiCall?.enqueue(object : Callback<Any?> {

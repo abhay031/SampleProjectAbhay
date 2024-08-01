@@ -4,7 +4,9 @@ plugins {
     id 'kotlin-kapt'
     id 'kotlin-android'
     id 'kotlin-parcelize'
+    id 'com.google.dagger.hilt.android'
 }
+
 
 android {
     namespace 'com.android.abhay'
@@ -56,6 +58,12 @@ dependencies {
     implementation libs.kotlinx.serialization.json.v130
     kapt 'com.github.bumptech.glide:compiler:4.12.0'
     implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+// hilt
+    implementation libs.hilt.android.compiler
+    implementation libs.hilt.android
+    implementation libs.androidx.hilt.compiler
+    implementation libs.androidx.hilt.work
 
     implementation libs.material
     testImplementation libs.junit
