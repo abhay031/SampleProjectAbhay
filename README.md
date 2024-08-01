@@ -1,1 +1,1 @@
-[![Watch the video](https://raw.githubusercontent.com/SampleProjectAbhay/blob/master/sample/sampleImage.jpeg)](https://raw.githubusercontent.com/SampleProjectAbhay/blob/master/sample/sampleVideo.mp4)
+[![Watch the video](https://github.com/SampleProjectAbhay/blob/master/sample/sampleImage.jpeg)](https://github.com/SampleProjectAbhay/blob/master/sample/sampleVideo.mp4)
